@@ -15,10 +15,14 @@ angular.module('TodoApp', [])
 
             // clear the texbox
             $scope.taskName = '';
-
-            //console.log($scope.taskName);
         };
 
-
-
+        // delete an existing task
+        $scope.deleteTodo = function() {
+            if (confirm('Are you sure you want to delete this item?')) {
+                $scope.tasks.splice(this.$index, 1);
+            }
+        };
     });
+
+

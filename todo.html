@@ -28,7 +28,8 @@
         <h2>{{ tasks.length }} Current ToDo Items</h2>
         <ul class="list-group">
             <li class="list-group-item" ng-repeat="t in tasks track by $index">
-                {{ t }}
+                <label class="col-sm-4">{{ t }}</label>
+                <button class="btn btn-danger" ng-click="deleteTodo()">Delete</button>
             </li>
         </ul>
     </section>
@@ -39,14 +40,14 @@
 <!-- AngularJS -->
 <script src="scripts/angular.min.js"></script>
 
-<!-- ToDo Script -->
-<script src="scripts/todo.js"></script>
-
 <!-- jQuery -->
 <script
         src="http://code.jquery.com/jquery-3.1.1.min.js"
         integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
         crossorigin="anonymous"></script>
+
+<!-- ToDo Script -->
+<script src="scripts/todo.js"></script>
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
